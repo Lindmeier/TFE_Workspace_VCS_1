@@ -4,8 +4,9 @@ provider "fakewebservices" {
 }
 
 module "test" {
-  source  = "app.terraform.io/team-automation/test/tfe"
-  version = "1.0.2"
+  source  = "app.terraform.io/team-automation/server/fakewebservices"
+  version = "0.0.1"
   # insert required variables here
-  anzahl = 2
+  serverCount = 2
+  dbSize = 512
 }
